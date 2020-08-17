@@ -25,7 +25,7 @@
     "gatsby"
   ],
   "scripts": {
-    "build": "gatsby build",
+    "build": "yarn install && gatsby build",
     "develop": "gatsby develop",
     "start": "yarn develop",
     "serve": "gatsby serve",
