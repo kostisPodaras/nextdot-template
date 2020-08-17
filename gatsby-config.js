@@ -13,6 +13,20 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // Import Aliases
+    // {
+    //   resolve: `gatsby-plugin-alias-imports`,
+    //   options: {
+    //     alias: {
+    //       app: './src/components/app',
+    //       pages: './src/pages',
+    //       components: './src/components',
+    //       store: './src/store',
+    //       models: './src/models',
+    //     },
+    //     extensions: ['js', 'css', 'json', 'svg', 'png', 'jpeg', 'jpg'],
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -31,4 +45,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
