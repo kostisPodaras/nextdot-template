@@ -2,12 +2,6 @@ import React from 'react';
 
 import Header from './header';
 
-const Layout = ({ children }) => {
-  return (
-    <>
-      <Header />
-    </>
-  );
-};
+const Layout = () => <Header />;
 
 export default Layout;
