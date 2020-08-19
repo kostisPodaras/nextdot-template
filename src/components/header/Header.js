@@ -9,7 +9,16 @@ type Props = {
 };
 
 const Header = ({ classes }: Props) => {
-  return <p className={classes.test}>test component</p>;
+  return (
+    <div className={classes.test}>
+      <p>Welcome to our template setup.</p>
+      <p>
+        The Tech behind this framework is React, Redux, RXjs, Materia-UI, so you
+        can start immediately your project with this framework without any
+        configuration.
+      </p>
+    </div>
+  );
 };
 
 export default withStyles(styles)(Header);
