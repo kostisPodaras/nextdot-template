@@ -2,7 +2,9 @@ import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import withStyles from '@material-ui/core/styles/withStyles';
 import ThemeProvider from '@material-ui/styles/ThemeProvider';
+import { Provider } from 'react-redux';
 
+import store from 'store';
 import theme from './theme';
 import styles from './styles';
 
@@ -18,19 +20,15 @@ const UISetupStyles = withStyles(styles)(({ children }: UISetupStylesProps) => (
 ));
 
 type UISetupProps = {
-  // history: Object,
   children: HTMLElement | Object | [],
 };
 
-const UISetup = ({
-  // history,
-  children,
-}: UISetupProps) => (
-  //   <LocationProvider history={history}>
-  <ThemeProvider theme={theme()}>
-    <UISetupStyles>{children}</UISetupStyles>
-  </ThemeProvider>
-  //   </LocationProvider>
+const UISetup = ({ children }: UISetupProps) => (
+  <Provider store={store}>
+    <ThemeProvider theme={theme()}>
+      <UISetupStyles>{children}</UISetupStyles>
+    </ThemeProvider>
+  </Provider>
 );
 
 export default UISetup;

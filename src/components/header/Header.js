@@ -17,6 +17,7 @@ const Header = ({ classes }: Props) => {
         can start immediately your project with this framework without any
         configuration.
       </p>
+      <p>Go to page 2 to test reducers, actions, epics etc</p>
     </div>
   );
 };

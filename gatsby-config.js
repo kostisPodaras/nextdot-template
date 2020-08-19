@@ -21,7 +21,7 @@ module.exports = {
           pages: './src/pages',
           components: './src/components',
           store: './src/store',
-          // models: './src/models',
+          models: './src/models',
         },
         extensions: ['js', 'css', 'json', 'svg', 'png', 'jpeg', 'jpg'],
       },
