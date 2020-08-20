@@ -1,11 +1,8 @@
-import { INCREMENT, DECREMENT } from './types';
+import { Action } from 'core/utils';
 
-const increment = () => ({
-  type: INCREMENT,
-});
+const namespaceAction = Action('//counter');
 
-const decrement = () => ({
-  type: DECREMENT,
-});
+const increment = namespaceAction('INCREMENT');
+const decrement = namespaceAction('DECREMENT');
 
 export { increment, decrement };
