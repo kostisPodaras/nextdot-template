@@ -22,6 +22,7 @@ module.exports = {
           components: './src/components',
           store: './src/store',
           models: './src/models',
+          core: './src/core',
         },
         extensions: ['js', 'css', 'json', 'svg', 'png', 'jpeg', 'jpg'],
       },
