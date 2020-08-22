@@ -35,7 +35,10 @@ const Header = ({ classes, counter, increment, decrement }: Props) => {
       <button type="button" onClick={decrement}>
         -
       </button>
-      <p>counter will change after 1 sec and the value is: {counter}</p>
+      <p>
+        Increase the counter will change back after 2 sec and the value is:{' '}
+        {counter}
+      </p>
     </div>
   );
 };
