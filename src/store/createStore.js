@@ -1,15 +1,17 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { createEpicMiddleware } from 'redux-observable';
 
+import rootEpic from './rootEpic';
 import rootReducer from './rootReducer';
 
-// This is for gatsby error --> "window" is not available during server side rendering.
-const windowExist = typeof window === 'object';
+const epicMiddleware = createEpicMiddleware();
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
   rootReducer,
-  windowExist &&
-    window.__REDUX_DEVTOOLS_EXTENSION__ &&
-    window.__REDUX_DEVTOOLS_EXTENSION__(),
+  composeEnhancers(applyMiddleware(epicMiddleware)),
 );
+
+epicMiddleware.run(rootEpic);
 
 export default store;
