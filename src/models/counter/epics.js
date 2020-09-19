@@ -6,16 +6,6 @@ import { increment, decrement } from './actions';
 const incrementEpic = (action$) =>
   action$.pipe(ofType(increment.type), delay(2000), mapTo(decrement()));
 
-// const decrementEpic = (action$) =>
-//   action$.pipe(
-//     ofType(decrement.type),
-//     delay(2000),
-//     mapTo(decrement()),
-//   );
-
-const counterEpic = combineEpics(
-  incrementEpic,
-  // decrementEpic
-);
+const counterEpic = combineEpics(incrementEpic);
 
 export { counterEpic };
