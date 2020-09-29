@@ -1,7 +1,7 @@
 import React from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 
-import withModelProps from 'core/components/model-props';
+import { withModelProps } from 'core/components/model-props';
 import { compose } from 'core/utils';
 
 import { increment, decrement, counter } from 'models/counter';

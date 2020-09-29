@@ -1,8 +1,8 @@
-import { Action } from 'core/utils';
+import { ActionCreator } from 'core/models/actions';
 
-const namespaceAction = Action('//counter');
+const namespacedActionCreator = ActionCreator('//counter');
 
-const increment = namespaceAction('INCREMENT');
-const decrement = namespaceAction('DECREMENT');
+const increment = namespacedActionCreator('INCREMENT');
+const decrement = namespacedActionCreator('DECREMENT');
 
 export { increment, decrement };

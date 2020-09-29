@@ -1,3 +1,4 @@
+import useModelProps from './useModelProps';
 import withModelProps from './withModelProps';
 
-export default withModelProps;
+export { useModelProps, withModelProps };
