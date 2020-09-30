@@ -1,14 +1,17 @@
-import { tap } from 'rxjs/operators';
-import { ofType, combineEpics } from 'redux-observable';
+import {
+  //  ofType,
+  combineEpics,
+} from 'redux-observable';
 
-import { signIn, signOut } from './actions';
+// import { signIn, signOut } from './actions';
 
-const signInEpic = (action$) =>
-  action$.pipe(ofType(signIn.type), tap(console.log('signIn')));
+// const signInEpic = (action$, state$) =>
+//   action$.pipe(ofType(signIn.type), navigate to App page );
 
-const signOutEpic = (action$) =>
-  action$.pipe(ofType(signOut.type), tap(console.log('signOut')));
+// const signOutEpic = (action$, state$) =>
+//   action$.pipe(ofType(signOut.type), delete userToken/navigate);
 
-const counterEpic = combineEpics(signInEpic, signOutEpic);
+const userEpic = combineEpics();
+// signInEpic, signOutEpic
 
-export { counterEpic };
+export { userEpic };
