@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '@reach/router';
+import { Link } from 'gatsby';
 import Grid from '@material-ui/core/Grid';
 import SettingsIcon from '@material-ui/icons/Settings';
 import IconButton from '@material-ui/core/IconButton';
@@ -16,7 +16,7 @@ const Sidebar = ({ classes }: Props) => (
   <Grid container className={classes.container}>
     <Grid justify="space-around" container>
       <Tooltip title="Edit Profile">
-        <Link to="profile">
+        <Link to="/app/profile">
           <IconButton>
             <SettingsIcon />
           </IconButton>

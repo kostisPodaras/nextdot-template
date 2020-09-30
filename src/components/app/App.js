@@ -9,10 +9,12 @@ import styles from './styles';
 
 const App = () => {
   return (
-    <Router basepath="/app">
-      <Chat path="/" />
-      <Profile path="/profile" />
-    </Router>
+    <div>
+      <Router basepath="/app">
+        <Chat path="/" />
+        <Profile path="/profile" />
+      </Router>
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from '@reach/router';
+// import { Link } from '@reach/router';
+import { Link } from 'gatsby';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 import styles from './styles';
@@ -17,7 +18,7 @@ const Home = ({ classes }: Props) => {
         app page
       </p>
       <button type="button">
-        <Link to="/app">Login</Link>
+        <Link to="app">Login</Link>
       </button>
     </div>
   );
