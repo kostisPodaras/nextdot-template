@@ -12,7 +12,7 @@ const App = () => {
     <div>
       <Router basepath="/app">
         <Chat path="/" />
-        <Profile path="/profile" />
+        <Profile path="profile" />
       </Router>
     </div>
   );

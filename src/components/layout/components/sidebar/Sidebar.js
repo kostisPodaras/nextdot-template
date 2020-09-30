@@ -23,7 +23,8 @@ const Sidebar = ({ classes }: Props) => (
         </Link>
       </Tooltip>
 
-      <p>Sidebar, something like slack sidebar</p>
+      <p>Lets say its something like Slack sidebar</p>
+      <p>Press the icon to change route to Profile editing</p>
     </Grid>
   </Grid>
 );

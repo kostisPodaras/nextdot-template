@@ -27,6 +27,10 @@ module.exports = {
         extensions: ['js', 'css', 'json', 'svg', 'png', 'jpeg', 'jpg'],
       },
     },
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/app/*`] },
+    },
 
     // Flow
     'gatsby-plugin-flow',

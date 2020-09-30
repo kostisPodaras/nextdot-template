@@ -1,6 +1,5 @@
 import React from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
-import { Link } from '@reach/router';
 
 import { withModelProps } from 'core/components/model-props';
 import { compose } from 'core/utils';
@@ -42,9 +41,6 @@ const Chat = ({ classes, counter, increment, decrement }: Props) => {
         Increase the counter will change back after 1 sec and the value is:
         {counter}
       </p>
-      <button type="button">
-        <Link to="/">Stimulate log-out</Link>
-      </button>
     </div>
   );
 };
