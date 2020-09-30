@@ -3,6 +3,6 @@ import { ActionCreator } from 'core/models/actions';
 const namespacedActionCreator = ActionCreator('//user');
 
 const signIn = namespacedActionCreator('signIn');
-const signout = namespacedActionCreator('signout');
+const signOut = namespacedActionCreator('signOut');
 
-export { signIn, signout };
+export { signIn, signOut };
