@@ -4,7 +4,7 @@ import { counterEpic } from 'models/counter';
 
 export const rootEpic = combineEpics(
   counterEpic,
-  // the other epics i will add
+  // Here all other epics will be added.
 );
 
 export default rootEpic;

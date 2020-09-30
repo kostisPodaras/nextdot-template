@@ -1,11 +1,10 @@
 const styles = () => ({
-  test: {
-    border: '1px solid',
+  container: {
+    padding: 10,
     textAlign: 'center',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '300px',
     flexDirection: 'column',
   },
 });

@@ -13,8 +13,9 @@ const theme = (mode) => {
     typography: { ...typography },
     // or typography
     app: {
-      maxWidth: 1920,
-      minWidth: 320,
+      maxWidth: '90vw',
+      maxHeight: '90vh',
+      sideBarWidth: '35vw',
     },
   });
   return muiTheme;

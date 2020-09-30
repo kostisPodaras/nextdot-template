@@ -1,13 +1,11 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
-import { UISetup, Header } from 'components';
+import { UISetup, Home } from 'components';
 
-const IndexPage = () => (
+const SecondPage = () => (
   <UISetup>
-    <Header />
-    <Link to="/page-2/">Go to page 2</Link>
+    <Home />
   </UISetup>
 );
 
-export default IndexPage;
+export default SecondPage;

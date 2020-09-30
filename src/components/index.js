@@ -1,4 +1,6 @@
 import UISetup from './ui-setup';
-import Header from './header';
+import Layout from './layout';
+import App from './app';
+import Home from './home';
 
-export { UISetup, Header };
+export { UISetup, App, Home, Layout };
