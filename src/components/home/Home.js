@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { navigate } from '@reach/router';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 import { withModelProps } from 'core/components/model-props';
@@ -10,6 +10,7 @@ import styles from './styles';
 
 type Props = {
   classes: Object,
+
   signIn: () => {},
 };
 
@@ -21,8 +22,13 @@ const Home = ({ classes, signIn }: Props) => {
         Button below will stimulate Sign Up / Sign In, which will redirect us to
         app page
       </p>
-      <button onClick={signIn} type="button">
-        <Link to="app">Login</Link>
+      <button
+        onClick={() => {
+          signIn();
+          navigate('app');
+        }}
+        type="button">
+        Login
       </button>
     </div>
   );

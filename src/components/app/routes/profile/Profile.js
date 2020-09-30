@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from '@reach/router';
 import Grid from '@material-ui/core/Grid';
 import withStyles from '@material-ui/core/styles/withStyles';
+import { navigate } from '@reach/router';
 
 import { withModelProps } from 'core/components/model-props';
 import { compose } from 'core/utils';
@@ -14,21 +14,24 @@ type Props = {
   signOut: () => {},
 };
 
-const Profile = ({ classes, signOut }: Props) => {
-  return (
-    <Grid
-      className={classes.container}
-      container
-      direction="column"
-      justify="center"
-      alignItems="center">
-      <h1>Profile route</h1>
-      <button onClick={signOut} type="button">
-        <Link to="/">Stimulate log-out</Link>
-      </button>
-    </Grid>
-  );
-};
+const Profile = ({ classes, signOut }: Props) => (
+  <Grid
+    className={classes.container}
+    container
+    direction="column"
+    justify="center"
+    alignItems="center">
+    <h1>Profile route</h1>
+    <button
+      onClick={() => {
+        signOut();
+        navigate('/');
+      }}
+      type="button">
+      Logout
+    </button>
+  </Grid>
+);
 
 export default compose(
   withModelProps({ signOut }),
